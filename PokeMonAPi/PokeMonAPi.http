@@ -1,0 +1,5 @@
+@PokeMonAPi_HostAddress = http://localhost:5248
+
+GET {{PokeMonAPi_HostAddress}}/pokemon/
+Accept: application/json
+###

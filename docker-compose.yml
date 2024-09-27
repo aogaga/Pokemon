@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./PokeMonAPi
+      dockerfile: Dockerfile  # Make sure the Dockerfile is in the context directory
+    ports:
+      - "5248:8080"  # Map the host port to the container's exposed port
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Redis__Configuration=redis:6379  # Connection string to Redis
+    depends_on:
+      - redis
+    networks:
+      - app-network
+
+  react:
+    build:
+      context: ./pokemon-ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "PokeMonAPi.Controllers.DashBoardController",
+    "Method": "Get",
+    "RelativePath": "DashBoard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PokeMonAPi.Models.DashBoard",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetDashBoard"
+  },
+  {
+    "ContainingType": "PokeMonAPi.Controllers.PokeMonController",
+    "Method": "Get",
+    "RelativePath": "PokeMon",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[PokeMonAPi.Models.Pokemon, PokeMonAPi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetPokemon"
+  }
+]
